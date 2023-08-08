@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.junit.runners.Parameterized;
@@ -43,8 +42,7 @@ public class LionParametrizedTest {
     // тест, проверяет пол
     public void checkSex() throws Exception {
         Lion lion = new Lion(sex, feline);
-        Lion lionSpy = Mockito.spy(lion);
-        Assert.assertEquals(mane, lionSpy.doesHaveMane());
+        Assert.assertEquals(mane, lion.doesHaveMane());
     }
 
 
